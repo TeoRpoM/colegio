@@ -1,0 +1,56 @@
+﻿<div class="container mt-4">
+    <button type="button" class="btn btn-success mb-3" onclick="crearLibro()">
+        <i class="bi bi-plus"></i> Agregar Libro
+    </button>
+
+    <table id="tablaLibro" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Portada</th>
+                <th>Libro</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="userTable"></tbody>
+    </table>
+
+</div>
+
+<a href="#" target="_blank"></a>
+
+<!-- Modal -->
+<div class="modal fade" id="modalId" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <form id="formUser" class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="titleId">Agregar Libro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="nameId" placeholder="Ingrese nombre" required>
+                    <label for="nameId">Ingrese nombre</label>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Ingrese Portada</label>
+                    <input type="file" class="form-control" id="portadaId" required />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Ingrese Libro</label>
+                    <input type="file" class="form-control" id="libroId" required />
+                </div>
+
+                <input type="hidden" id="editIndex">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/libros.js"></script>
+}
